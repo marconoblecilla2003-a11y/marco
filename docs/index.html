@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jabones Artesanales & Aceites Esenciales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header>
+        <div class="logo">Soap of Nature.</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#catalogo">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero / Inicio -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Cuidado Natural para tu Piel</h1>
+            <p>Jabones artesanales elaborados con extractos de aceites esenciales.</p>
+            <a href="#catalogo" class="btn">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros" class="container">
+        <h2>Sobre Nosotros</h2>
+        <p>En Soap of Nature. creamos productos que aprovechan los beneficios del medio ambiente. Cada jabón es elaborada mediante un proceso de destilación a vapor y prensado en frio, conservando las propiedades terapéuticas y aroma puro de los aceites esenciales.</p>
+    </section>
+
+    <!-- Portafolio / Catálogo -->
+    <section id="catalogo" class="container bg-light">
+        <h2>Nuestro Portafolio de Productos</h2>
+        <div class="filter-buttons">
+            <button class="btn-filter active" onclick="filtrarProductos('todos')">Todos</button>
+            <button class="btn-filter" onclick="filtrarProductos('relajante')">Relajantes</button>
+            <button class="btn-filter" onclick="filtrarProductos('exfoliante')">Exfoliantes</button>
+            <button class="btn-filter" onclick="filtrarProductos('hidratante')">Hidratantes</button>
+        </div>
+
+        <div class="grid-productos" id="grid-productos">
+            <!-- Tarjeta 1 -->
+            <div class="card" data-categoria="relajante">
+                <div class="img-placeholder">Lavanda & Limón</div>
+                <div class="card-body">
+                    <h3>Jabón de Lavanda</h3>
+                    <p>Enriquecido con aceite esencial de lavanda. Ideal para relajación y limpieza profunda .</p>
+                    <span class="badge">Relajante</span>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="card" data-categoria="exfoliante">
+                <div class="img-placeholder">Café & Menta</div>
+                <div class="card-body">
+                    <h3>Jabón de Café y Menta</h3>
+                    <p>Exfoliante natural con granos de café molidos y aceite esencial de menta refrescante.</p>
+                    <span class="badge">Exfoliante</span>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="card" data-categoria="hidratante">
+                <div class="img-placeholder">Miel & Avena</div>
+                <div class="card-body">
+                    <h3>Jabón de Avena y Miel</h3>
+                    <p>Nutrición profunda para piel seca con propiedades calmantes de aceite de almendras dulces.</p>
+                    <span class="badge">Hidratante</span>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="card" data-categoria="relajante">
+                <div class="img-placeholder">Eucalipto & Romero</div>
+                <div class="card-body">
+                    <h3>Jabón Herbal</h3>
+                    <p>Propiedades antisépticas con aceite esencial de eucalipto para una sensación descongestionante.</p>
+                    <span class="badge">Relajante</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="container">
+        <h2>Contacto</h2>
+        <p>¿Tienes dudas o deseas hacer un pedido personalizado? Escríbenos directamente:</p>
+        <div class="contacto-wrapper">
+            <div class="info-contacto">
+                <p><strong>Ubicación:</strong> Ecuador</p>
+                <p><strong>Correo:</strong> contacto@SoapofNature.com</p>
+                <p><strong>Horario:</strong> Lunes a Viernes 09:00 - 18:00</p>
+            </div>
+            <form onsubmit="handleSubmit(event)" class="form-contacto">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <textarea rows="4" placeholder="Mensaje o consulta" required></textarea>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Soap of Nature. - Proyecto para Computación en la Nube.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
